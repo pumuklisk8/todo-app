@@ -11,7 +11,8 @@ class List extends Component {
                         <ListItem 
                             key={item.id} 
                             parentId={this.props.list.id}
-                            item={item} 
+                            item={item}
+                            isArchives={this.props.isArchives}
                             onChangeStatus={this.props.onChangeStatus} 
                         />    
                     )}

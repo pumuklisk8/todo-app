@@ -6,19 +6,37 @@ class TodoApp extends Component {
         lists: [
             {
                 id: 1,
-                listName: "Todo",
+                listName: "Todos",
                 items: [
                     {
                         id: 1,
-                        subject: 'Todo Item 1',
+                        subject: 'Add item',
                         deadline: '2019.09.01.',
-                        text: 'Todo Item description',
+                        text: 'Ability to add item',
                     },
                     {
                         id: 5,
-                        subject: 'Todo Item 2',
+                        subject: 'Update item',
                         deadline: '2019.09.01.',
-                        text: 'Todo Item description',
+                        text: 'Ability to update item',
+                    },
+                    {
+                        id: 6,
+                        subject: 'Reorder items',
+                        deadline: '2019.09.01.',
+                        text: 'Add ordering with dragndrop',
+                    },
+                    {
+                        id: 8,
+                        subject: 'Add lists',
+                        deadline: '2019.09.01.',
+                        text: 'Ability to add more lists',
+                    },
+                    {
+                        id: 3,
+                        subject: 'Backend',
+                        deadline: '2019.09.01.',
+                        text: 'Save items to DB',
                     },
                 ]
             }
@@ -40,6 +58,7 @@ class TodoApp extends Component {
                     />
                )}
                <List
+                    isArchives={true}
                     list={this.state.archived}
                     onChangeStatus={this.handleDeArchive}
                />

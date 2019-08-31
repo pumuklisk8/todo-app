@@ -7,7 +7,10 @@ class ListItem extends Component {
         return (
             <li className="list-group-item">
                 <div>
-                    <input type="checkbox" onChange={ () => this.props.onChangeStatus(id, this.props.parentId)} className="m-3" />
+                    <input 
+                        type="checkbox" 
+                        onChange={ () => this.props.onChangeStatus(id, this.props.parentId)} 
+                        checked={this.props.isArchives !== undefined ? true : false} className="m-3" />
                     {subject}
                     <div className="ml-5"> 
                         <span className="badge badge-secondary badge-danger">{deadline}</span>
